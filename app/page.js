@@ -1,3 +1,4 @@
+import LinkedInLink from '@/components/LinkedInLink';
 import { Footer, Navbar } from '../components';
 import { About, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World } from '../sections';
 
@@ -22,6 +23,7 @@ const Page = () => (
             <Feedback />
         </div>
         <Footer />
+        <LinkedInLink />
     </div>
 );
 

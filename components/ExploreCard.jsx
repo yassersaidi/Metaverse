@@ -26,7 +26,11 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
                 {title}
             </h3>
         ) : (
-            <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
+            <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: 0.2 }}
+            className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
                 <div
                     className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px] relative`}
                 >
@@ -44,7 +48,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
                 <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
                     {title}
                 </h2>
-            </div>
+            </motion.div>
         )}
     </motion.div>
 );

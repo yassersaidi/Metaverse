@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { socials } from '../helpers';
 
 import styles from '../styles';
 import { footerVariants } from '../utils/motion';
@@ -42,21 +41,8 @@ const Footer = () => (
                         METAVERUS
                     </h4>
                     <p className="font-normal text-[14px] text-white opacity-50">
-                        Copyright © 2021 - 2022 Metaversus. All rights reserved.
+                        Copyright © 2023 Metaversus. All rights reserved.
                     </p>
-
-                    <div className="flex gap-4">
-                        {socials.map((social) => (
-                            <Image quality={100}
-                                width={100}
-                                height={100}
-                                key={social.name}
-                                src={social.url}
-                                alt={social.name}
-                                className="w-[24px] h-[24px] object-contain cursor-pointer"
-                            />
-                        ))}
-                    </div>
                 </div>
             </div>
         </div>
